@@ -1,0 +1,65 @@
+data:
+    training_data:
+    validation_data:
+    test_data:
+embeddings:
+    keras_embeddings:
+        tokenization_levels: [word, bpe, char]
+        embeddings_size: 128
+        network_type: CNN
+        filter_sizes: [3]
+        bpe_model: None
+        char_separator: 'A'
+        length_limit:
+            word: 50
+            bpe: 100
+            char: 200
+        bpe_tokenizer: None
+    bert:
+        use: False
+        model_path: None
+        n_fine_tune_layers:10
+            pooling:None,
+            bert_path:"https://tfhub.dev/google/bert_uncased_L-12_H-768_A-12/1"
+            trainable: True
+            output_size: 768
+            pooling: None
+            limit_length:
+                word: 50
+    glove:
+        use: False
+        tokenization_levels: [] # [word, bpe, char]
+        epochs: 30
+        model_path:
+            word: None
+            bpe: None
+            char: None
+        length_limit:
+            word: 50
+            bpe: 100
+            char: 200
+        bpe_tokenizer: None
+    paragrapgVector:
+        use: False
+        epochs: 30
+        model_path: None
+        dm: 0
+        vector_size: 128
+        sample: 0
+        #workers=multiprocessing.cpu_count()
+        negative: 5
+        hs: 0
+        window: 10
+        alpha: 0.05
+training:
+    batch_size: 50
+    save_model_weights: None
+    save_model_config: None
+    load_model_config: None
+    nbest: 1
+    delimiter: '\t'
+    epochs: 1000
+    trainig_verbose: 0
+    num_filters: 512
+
+
