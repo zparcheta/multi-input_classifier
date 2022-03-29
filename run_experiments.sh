@@ -2,7 +2,7 @@
 source ~/.bashrc
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate 3.6
-for i in gastrofy SST ger movie provenword aclImdb cz
+for i in SST ger movie aclImdb cz
 do
 	echo "---> $i"
         echo "word"
