@@ -3,7 +3,7 @@ source ~/.bashrc
 source ~/anaconda3/etc/profile.d/conda.sh
 
 conda activate p3.6_classifier
-for i in gastrofy
+for i in ger movie
 do
   for filter in 3 3,4,5
   do
